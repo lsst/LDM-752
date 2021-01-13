@@ -15532,13 +15532,17 @@ period of time (e.g. the previous 24 hours).
 \href{https://jira.lsstcorp.org/browse/LVV-18298}{LVV-18298} &
 Leanne Guy & Not Covered &
 \begin{tabular}{c}
+LVV-T2091 \\
 \end{tabular}
 \\
 \hline
 \end{longtable}
 
 \textbf{Verification Element Description:} \\
-Undefined
+This verification element corresponds to the fraction of alerts
+distributed, OTR1 = 98{{[}percent{]}}.
+
+Related requirements are addressed in the sibling verification elements.
 
 {\footnotesize
 \begin{longtable}{p{2.5cm}p{13.5cm}}
@@ -15585,6 +15589,19 @@ OSS-REQ-0112 & Science Visit Alert Generation Reliability \\
 }
 
 
+\subsubsection{Test Cases Summary}
+\begin{longtable}{p{3cm}p{2.5cm}p{2.5cm}p{3cm}p{4cm}}
+\toprule
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2091}{LVV-T2091} & \multicolumn{4}{p{12cm}}{ Verify Fraction of Alerts Transmitted Within Latency Threshold } \\ \hline
+\textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
+Eric Bellm & Draft & 1 & false & Test \\ \hline
+\end{longtable}
+{\scriptsize
+\textbf{Objective:}\\
+Verify that at least \textbf{OTR1 = 98{[}percent{]}} of detectable
+alerts are actually transmitted within latency \textbf{OTT1 =
+1{[}minute{]}}.~
+}
   
  \newpage 
 \subsection{[LVV-18299] DMS-REQ-0393-V-01: Average Number of Alerts Per Visit }\label{lvv-18299}
@@ -15595,13 +15612,18 @@ OSS-REQ-0112 & Science Visit Alert Generation Reliability \\
 \href{https://jira.lsstcorp.org/browse/LVV-18299}{LVV-18299} &
 Leanne Guy & Not Covered &
 \begin{tabular}{c}
+LVV-T2097 \\
 \end{tabular}
 \\
 \hline
 \end{longtable}
 
 \textbf{Verification Element Description:} \\
-Undefined
+This verification element corresponds to the average number of alerts
+per standard visit, nAlertVisitAvg = 10000{{[}integer{]}}.
+
+The related sibling verification element satisfies the additional
+constraint on the peak number of alerts per visit.
 
 {\footnotesize
 \begin{longtable}{p{2.5cm}p{13.5cm}}
@@ -15642,6 +15664,19 @@ OSS-REQ-0193 & Alerts per Visit \\
 }
 
 
+\subsubsection{Test Cases Summary}
+\begin{longtable}{p{3cm}p{2.5cm}p{2.5cm}p{3cm}p{4cm}}
+\toprule
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2097}{LVV-T2097} & \multicolumn{4}{p{12cm}}{ Verify Handling of Average Number of Alerts } \\ \hline
+\textbf{Owner} & \textbf{Status} & \textbf{Version} & \textbf{Critical Event} & \textbf{Verification Type} \\ \hline
+Eric Bellm & Draft & 1 & false & Test \\ \hline
+\end{longtable}
+{\scriptsize
+\textbf{Objective:}\\
+Verify that the system can identify and distribute an average
+of~\textbf{nAlertVisitAvg~= 10000{[}integer{]}~}alerts per standard
+visit over a given night.
+}
   
  \newpage 
 \subsection{[LVV-18339] DMS-REQ-0359-V-18: Outlier limit on zero points }\label{lvv-18339}
@@ -16804,9 +16839,13 @@ LVV-T1564 \\
  LVV-18295  &
 LVV-T1831 \\
 \hline
-DMS-REQ-0392 & LVV-18298 &  \\ \hline
+ DMS-REQ-0392  &
+ LVV-18298  &
+LVV-T2091 \\
 \hline
-DMS-REQ-0393 & LVV-18299 &  \\ \hline
+ DMS-REQ-0393  &
+ LVV-18299  &
+LVV-T2097 \\
 \hline
  DMS-REQ-0395  &
  LVV-18465  &
